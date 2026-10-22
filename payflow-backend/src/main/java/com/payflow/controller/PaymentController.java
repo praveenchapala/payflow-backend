@@ -18,7 +18,9 @@ import com.razorpay.Payment;
 
 @RestController
 @RequestMapping("/api/payments")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(
+    origins = "${PAYFLOW_FRONTEND_URL:http://localhost:5173}"
+)
 public class PaymentController {
 
     private static final int EXPECTED_AMOUNT = 49900;
